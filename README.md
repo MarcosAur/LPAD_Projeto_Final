@@ -1,9 +1,9 @@
-# 📊 LPED_ProjetoFinal
+# LPED_ProjetoFinal
 
 Projeto final da disciplina de **Linguagens de Programação para Engenharia de Dados**, desenvolvido em Python.
 O objetivo é construir uma pipeline de processamento de dados utilizando boas práticas de organização e versionamento.
 
-## 📁 Estrutura de Diretórios
+## Estrutura de Diretórios
 LPED_ProjetoFinal/
 ├── data/
 │ ├── input.csv
@@ -24,16 +24,15 @@ LPED_ProjetoFinal/
 ├── requirements.txt
 └── README.md
 
-## 🚀 Tecnologias e Ferramentas
+## Instalação
 
-- Python 3.x
-- pre-commit
-- (Adicione aqui outras bibliotecas usadas, como pandas, numpy, etc)
-
-## 📦 Instalação
-
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/LPED_ProjetoFinal.git
-   cd LPED_ProjetoFinal
+- Linux / Mac
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+- Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
