@@ -1,16 +1,19 @@
-# This is a sample Python script.
+import os
+import sys
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from src.pipeline import Pipeline
+from src.tasks.extrair import Extrair
+from src.tasks.transformar import Transformar
+from src.tasks.carregar import Carregar
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f"Hi, {name}")  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    pipeline = Pipeline()
+    pipeline.add_task(Extrair())
+    pipeline.add_task(Transformar())
+    pipeline.add_task(Carregar())
+    pipeline.execute()
 
-
-# Press the green button in the gutter to run the script.
 if __name__ == "__main__":
-    print_hi("PyCharm")
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main() 
