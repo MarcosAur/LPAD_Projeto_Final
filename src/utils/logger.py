@@ -9,8 +9,8 @@ class Logger:
         os.makedirs(log_dir, exist_ok=True)
         log_path = os.path.join(log_dir, "execucao.log")
         with open(log_path, "a", encoding="utf-8") as file:
-            now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-            file.write(f"[{type}] - {now} - {message}\n")
+            now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            file.write(f"{type} - [{now}] - {message}\n")
 
     def info(self, message: str) -> None:
         self.__write_log("INFO", message)

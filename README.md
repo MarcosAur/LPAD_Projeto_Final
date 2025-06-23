@@ -9,6 +9,7 @@ LPED_ProjetoFinal/
 │ ├── input.csv
 │ ├── output.csv
 │ └── stage.csv
+├── dvc-storage/
 ├── logs/
 │ └── execucao.log
 ├── src/
@@ -28,11 +29,27 @@ LPED_ProjetoFinal/
 
 - Linux / Mac
 ```bash
-python -m venv venv
-source venv/bin/activate
+python -m venv venv # Cria o virtual env
+source venv/bin/activate # Inicia o virtual env
+mkdir dvc-storage
+dvc remote add -d localstore ./dvc-storagemkdir -p data
+dvc push
+touch data/input.csv data/output.csv data/stage.csh
 ```
-- Windows
+- Windows (CMD)
 ```bash
-python -m venv venv
-venv\Scripts\activate
+python -m venv venv # Cria o virtual env
+venv\Scripts\activate # Inicia o virtual env
+mkdir dvc-storage
+dvc remote add -d localstore ./dvc-storage
+dvc push
+mkdir data
+type nul > data\input.csv
+type nul > data\output.csv
+type nul > data\stage.csh
+```
+
+## Execução
+```bash
+python3 main.py
 ```
