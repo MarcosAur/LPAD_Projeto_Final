@@ -31,6 +31,7 @@ LPED_ProjetoFinal/
 ```bash
 python -m venv venv # Cria o virtual env
 source venv/bin/activate # Inicia o virtual env
+python3 -m pip install -r requirements.txt
 mkdir dvc-storage
 dvc remote add -d localstore ./dvc-storagemkdir -p data
 dvc push
@@ -40,6 +41,7 @@ touch data/input.csv data/output.csv data/stage.csh
 ```bash
 python -m venv venv # Cria o virtual env
 venv\Scripts\activate # Inicia o virtual env
+python3 -m pip install -r requirements.txt
 mkdir dvc-storage
 dvc remote add -d localstore ./dvc-storage
 dvc push
